@@ -16,5 +16,10 @@ pipeline {
         sh './sample.o'
       }
     }
+    stage('Archive') {
+      steps {
+        archiveArtifacts artifacts: 'sample.cpp', 'sample.o'
+      }
+    }
   }
 }
