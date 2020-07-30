@@ -18,7 +18,7 @@ pipeline {
     }
     stage('Archive') {
       steps {
-        archiveArtifacts artifacts: 'sample.cpp', 'sample.o'
+        archiveArtifacts 'sample.cpp, sample.o'
       }
     }
   }
