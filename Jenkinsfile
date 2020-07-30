@@ -21,5 +21,10 @@ pipeline {
         archiveArtifacts 'sample.cpp, sample.o'
       }
     }
+    stage('Build another job') {
+      steps {
+        build 'mvn-compile'
+      }
+    }
   }
 }
