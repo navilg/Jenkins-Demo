@@ -3,17 +3,17 @@ pipeline {
   stages {
     stage('Compile') {
       steps {
-        sh 'gcc main.cpp -o main.o'
+        sh 'gcc sample.cpp -o sample.o'
       }
     }
     stage('Permission') {
       steps {
-        sh 'chmod +x main.o'
+        sh 'chmod +x sample.o'
       }
     }
     stage('Execute') {
       steps {
-        sh './main.o'
+        sh './sample.o'
       }
     }
   }
