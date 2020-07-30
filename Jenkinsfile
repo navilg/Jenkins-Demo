@@ -21,9 +21,18 @@ pipeline {
         archiveArtifacts 'sample.cpp, sample.o'
       }
     }
-    stage('Build another job') {
-      steps {
-        build 'mvn-compile'
+    stage('Parallel job') {
+      parallel {
+        stage('Build another job') {
+          steps {
+            build 'mvn-compile'
+          }
+        }
+        stage('Print message') {
+          steps {
+            sh 'echo "Test parallel job'
+          }
+        }
       }
     }
     stage('Clean Workspace') {
