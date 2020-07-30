@@ -1,4 +1,3 @@
-ws('/home/ubuntu/') {
 pipeline {
   agent any
   stages {
@@ -42,5 +41,4 @@ pipeline {
       }
     }
   }
-}
 }
