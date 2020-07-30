@@ -1,11 +1,6 @@
 pipeline {
   agent any
   stages {
-    stage('Clean Workspace') {
-      steps {
-        cleanWs()
-      }
-    }
     stage('Compile') {
       steps {
         sh 'g++ sample.cpp -o sample.o'
@@ -29,6 +24,11 @@ pipeline {
     stage('Build another job') {
       steps {
         build 'mvn-compile'
+      }
+    }
+    stage('Clean Workspace') {
+      steps {
+        cleanWs()
       }
     }
   }
