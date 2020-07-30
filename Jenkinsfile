@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('install gcc') {
       steps {
-        sh 'apt install gcc -y'
+        sh 'sudo apt install gcc -y'
       }
     }
     stage('Compile') {
