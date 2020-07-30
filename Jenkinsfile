@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Compile') {
       steps {
-        sh 'gcc sample.cpp -o sample.o'
+        sh 'g++ sample.cpp -o sample.o'
       }
     }
     stage('Permission') {
