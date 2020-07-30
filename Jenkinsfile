@@ -1,11 +1,6 @@
 pipeline {
   agent any
   stages {
-    stage('install gcc') {
-      steps {
-        sh 'sudo apt install gcc -y'
-      }
-    }
     stage('Compile') {
       steps {
         sh 'gcc sample.cpp -o sample.o'
