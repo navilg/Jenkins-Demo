@@ -30,7 +30,7 @@ pipeline {
         }
         stage('Print message') {
           steps {
-            sh 'echo "Test parallel job'
+            sh 'echo Test parallel job'
           }
         }
       }
